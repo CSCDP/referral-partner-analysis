@@ -35,7 +35,7 @@ You can get a glimpse of some suggested analysis further down.
 
 To run this programme, you will need to:
 - Have installed Python and created a conda environment aligned with [requirements.txt](requirements.txt).
-- Have run our Annex A cleaner (steps 10, 20 and optional 30) and Logger (step 50) code to get your Annex A return into a "log" shape suitable for analysis. This code can be found in the StatutoryDataCleaner repository. **We advise that you create a log of at least one year of Annex A data to get a meaningful analysis over time.**
+- Have run our Annex A cleaner (steps 10, 20 and optional 30) and Logger (step 50) code to get your Annex A return into a "log" shape suitable for analysis. This code can be found in the FrontDoorDataCollaboration repository. **We advise that you create a log of at least one year of Annex A data to get a meaningful analysis over time.**
 
 ### How to: code
 
