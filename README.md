@@ -1,17 +1,20 @@
-# ReferralPartnerAnalysis
+# Referral Partner Analysis
 
 
 Welcome!
 
 This code was originally developed by [Celine Gross](https://github.com/Cece78), [Chris Owen](https://github.com/chowen94) and [Kaj Siebert](https://github.com/kws) at Social Finance as part of a grant funded programme to support Local Authorities to collaborate on data analysis. The programme was called the ‘Front Door Data Collaboration’. It was supported financially by the Christie Foundation and Nesta (through the ‘What Works Centre for Children’s Social Care’). The LAs whose staff guided its development were Bracknell Forest, West Berkshire, Southampton, and Surrey. It also benefitted from advice from the National Performance and Information Managers Group.
 
-We are happy to share this code hoping that other data analysts may benefit from a quick way to analyse their Annex A returns and get new insights about their Front Door and their referral partners. 
+We are happy to share this code hoping that others may benefit from a quick way to analyse their Annex A returns and get new insights about their Front Door and MASH. 
 
-You can find more info about Social Finance Digital Labs on our website: https://www.sfdl.org.uk/
+This code is for data analysts from a Local Authority or from another body wishing to analyse Annex A data. Little Python knowledge is required to run this code.
+This page may be relevant for you you even if you're not a data analyst: we are presenting some outputs of the analysis further down that may interest you.
+
+You can find more info about Social Finance Digital Labs on our website https://www.sfdl.org.uk/ and our blog https://medium.com/social-finance-uk.
 
 
 
-## What's this code about?
+## What does this code do?
 
 **Who is referring the highest volumes to the Front Door, and what are the outcomes of these contacts?**
 
@@ -40,15 +43,19 @@ Once that is done, open the referral-partner-analysis notebook and follow the st
 1. **Input required**: define the filepaths to the log and to the folder in which the output of the analysis will be downloaded
 2. **Input required**: define the date at which the report should end and the analysis window (in months - we suggest at least 12 months)
 3. Run the rest of the notebook
-4. Find the resulting Excel spreadsheet in your output folder
+4. The output of the code is an Excel spreadsheet saved in your specified output folder. The Excel spreadsheet will be made of the following tabs:
+- One tab per contact source ('Police', 'Health', etc.) with number of contacts, number of referrals, number of assessments, number of contacts only (did not lead to referral), number of contacts that led to referral, number of contacts that led to assessment.
+- Three tabs ('Comparative contacts', 'Comparative referrals', 'Comparative assessments') comparing contacts, referrals and assessments across contact sources, including a lower and higher standard deviation bounds
+- One tab ('Contact only') counting volume and proportion of contacts that did not lead to further action, across contact sources, for the final month only
+Step 4 - One tab ('Total') that recaps total number of contacts, number of referrals, number of assessments and standard deviation bounds for all three
 
 You're done!
 
-### How to: further analysis
+### How to: visualising the output
 
 You can use the Excel spreadsheet to visualise Front Door trends. Here are a few suggestions:
 
-"Comparative contacts" tab:
+**With the "Comparative contacts" tab:**
 
 
 ![Contact trend](chart_examples/contact_trend.PNG)
@@ -58,7 +65,7 @@ Interpretation: The number of contacts in March 2025 have gone down and are lowe
 *This analysis can also be done for referrals ("Comparative referrals" tab) and assessment starts ("Comparative assessments" tab).*
 
 
-"NFA contacts" tab:
+**With the "Contact only" tab:**
 
 
 ![NFA contacts](chart_examples/contact_NFA.PNG)
@@ -67,7 +74,7 @@ Interpretation: The number of contacts in March 2025 have gone down and are lowe
 Interpretation: Partner 1 is by far referring the highest volume of contacts that did not require statutory services (did not progress to referral). However, other partners are referring more contacts that do not require statutory services in relative terms, e.g. Partner 6 and Partner 7 (98%) and Partner 11 (100%). **Looking at both volume and proportion could inform discussions around thresholds with referral partners who are referring contacts that do not require statutory services.**
 
 
-"Total" tab:
+**With the "Total" tab:**
 
 
 ![Contact outcomes](chart_examples/contact_outcomes.PNG)
