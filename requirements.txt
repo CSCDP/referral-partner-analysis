@@ -1,5 +1,4 @@
 numpy
-pandas>=0.25
+pandas>=1.0.1
 jupyter>=1.0.0
-jupyterlab>=1.2
 xlsxwriter>=1.2
